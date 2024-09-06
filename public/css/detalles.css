@@ -1,0 +1,386 @@
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+  }
+/* Estilo general del cuerpo */
+body {
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-width: 375px;
+    /* background: rgb(15, 32, 39); */
+    background: rgb(2, 0, 36);
+    /* background-image: linear-gradient(to right top, #fc6207, #c33d2a, #84262c, #431820, #000000); */
+}
+
+/* Estilo del encabezado */
+.flex-style {
+    display: flex;
+    align-items: center;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Desplazamiento suave */
+}
+
+
+/* Estilo del área de breadcrumb */
+.breadcrumb-area {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    padding: 200px 0;
+    color: #fff;
+    background: center/cover no-repeat;
+}
+
+/* Pseudo-elemento para la imagen de fondo difuminada */
+
+.breadcrumb-area::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    background: rgba(0, 0, 139, 0.4);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.breadcrumb-area>* {
+    position: relative;
+    /* Asegura que el contenido de la sección esté por encima del color de superposición */
+    z-index: 2;
+    /* Asegura que el contenido esté por encima del color de superposición */
+}
+
+/* Contenedor dentro del área de breadcrumb */
+.breadcrumb-area .container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Estilo del título de la página */
+.page-title-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.page-title {
+    font-family: Montserrat, sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+}
+
+/* Estilo del menú de breadcrumb */
+.breadcrumb-menu {
+    text-align: center;
+}
+
+.breadcrumb-trail {
+    display: inline-block;
+}
+
+.breadcrumb-trail ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.breadcrumb-trail li {
+    margin: 0 10px;
+}
+
+.breadcrumb-trail a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.breadcrumb-trail a:hover {
+    text-decoration: underline;
+}
+
+.bold {
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+/* Contenedor de detalles de película */
+.movie-details-container {
+    display: block;
+    /* Usa flexbox para alinear los detalles de la película y el tráiler lado a lado */
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo del recuadro de detalles de la película */
+.movie-details {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-right: 0;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+
+    align-items: center;
+}
+
+.movie-poster img {
+    height: auto;
+    margin: 0 40px;
+    border-radius: 8px;
+    /* Para limitar el tamaño máximo del póster */
+    max-width: 300px;
+}
+
+.movie-info{
+    width: 400px;
+}
+
+/* #name::first-letter {
+    text-transform: capitalize;
+} */
+
+/* Estilo específico para el texto en synopsis */
+#synopsis {
+    font-size: 18px;
+    /* Tamaño de fuente específico */
+    font-family: 'Montserrat', sans-serif;
+    /* Tipo de fuente específico (opcional, si quieres asegurarte de que sea igual al resto) */
+}
+
+/* Estilo del recuadro del tráiler */
+.movie-trailer {
+    width: 100%;
+    /* Ajusta el ancho para que ocupe todo el contenedor */
+    margin-left: 0;
+    /* Elimina el margen izquierdo */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    /* Espaciado superior para separación */
+}
+
+/* Estilo del contenedor del tráiler */
+#trailer-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Proporción de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    background: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#trailer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo del enlace de YouTube */
+#youtube-link {
+    display: block;
+    margin-top: 10px;
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+#youtube-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilo del pie de página */
+
+/* Personaliza la barra de desplazamiento para navegadores basados en WebKit */
+/* ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f9f8ff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(19, 0, 105);
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3b19ff;
+} */
+
+/* Estilos para los botones */
+.button-container {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: rgb(64, 0, 214);
+    color: white;
+}
+
+.button i {
+    margin-right: 5px;
+}
+
+/* Estilos para las películas recomendadas */
+.recommended-movies {
+    margin-top: 20px;
+    /* Espacio superior para separar de las secciones anteriores */
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    /* Línea superior para separar visualmente */
+    background-color: #f9f9f9;
+    /* Fondo suave para destacar la sección */
+    text-align: center;
+    /* Centra el contenido dentro del contenedor */
+}
+
+/* Estilo del título */
+.recommended-movies h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    /* Color del texto */
+}
+
+/* Estilo para la lista de películas */
+.movie-list {
+    display: flex;
+    /* Usa flexbox para alinear las películas en una fila */
+    justify-content: center;
+    /* Centra las películas horizontalmente */
+    gap: 20px;
+    /* Espacio entre los elementos */
+    flex-wrap: wrap;
+    /* Permite que las películas se envuelvan en varias filas si es necesario */
+    max-width: 1200px;
+    /* Define un ancho máximo para el contenedor */
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente */
+}
+
+/* Estilo para cada elemento de película */
+.movie-item {
+    width: 200px;
+    /* Ancho fijo para las películas */
+    border: 2px solid #ddd;
+    /* Color y grosor del marco */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    overflow: hidden;
+    /* Oculta contenido que desborde el marco */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Transiciones suaves para efectos */
+    background-color: #fff;
+    /* Fondo blanco para el contenido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil para profundidad */
+    text-align: center;
+    /* Centra el texto dentro de cada película */
+    padding: 5px;
+    margin: 30px;
+}
+
+/* Estilo de la imagen dentro del contenedor de película */
+.movie-item img {
+    width: 100%;
+    /* Imagen ajustada al ancho del contenedor */
+    height: auto;
+    /* Mantiene la relación de aspecto */
+    display: block;
+    /* Elimina el espacio en blanco debajo de la imagen */
+    border-bottom: 2px solid #ddd;
+    /* Línea divisoria entre la imagen y el texto */
+    transition: opacity 0.3s;
+    /* Transición suave para el efecto de oscurecimiento */
+}
+
+/* Efecto de oscurecimiento de la imagen */
+.movie-item:hover img {
+    opacity: 0.7;
+    /* Oscurece la imagen al pasar el ratón por encima */
+}
+
+/* Estilo para los textos de cada película */
+.movie-item p {
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    font-size: 14px;
+    /* Tamaño de fuente */
+    color: #666;
+    /* Color del texto */
+    margin: 0;
+    /* Elimina márgenes adicionales */
+}
+
+.movie-item p:first-of-type {
+    font-weight: bold;
+    /* Destaca el nombre de la película */
+    color: #333;
+    /* Color del nombre de la película */
+}
+
+/* Efecto al pasar el ratón sobre el elemento de la película */
+.movie-item:hover {
+    transform: scale(1.05);
+    /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Sombra más intensa al pasar el ratón */
+}
+
+
+@media (max-width: 1075px) {
+    .movie-poster {
+        display: flex;
+        justify-content: center; 
+        /* width: 100%;  */
+        margin: 0; 
+    }
+
+    .movie-poster img {
+        /* max-width: 80%;  */
+        /* margin: 0 auto;  */
+    }
+}

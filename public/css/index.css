@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.flex-style {
+  display: flex;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+html {
+  scroll-behavior: smooth; /* Desplazamiento suave */
+}
+
+body {
+  background: rgb(15, 32, 39);
+  background: rgb(2, 0, 36);
+  background-image: linear-gradient(
+    to right top,
+    #fc6207,
+    #c33d2a,
+    #84262c,
+    #431820,
+     #000000
+  );
+  height: 100%;
+  width: 100%;
+  min-width: 375px;
+  /* max-width: 1024px; */
+}
+
+#contenedor-principal {
+  /* flex: 1; */
+  color: white;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+/**------- Slider -----------*/
+
+.slider {
+  overflow: hidden;
+  width: 100%;
+  height: 600px;/* Ajusta la altura a 600px */
+  position: relative;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
+  z-index: 1;}
+
+.slider-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 1s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-inner img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 600px; /* Mantiene la altura de 600px */
+  object-fit: cover; /* Mantiene el formato de la imagen */
+}
+
+.datos-peliculas {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  z-index: 2;
+  width:  80%;
+}
+
+.datos-peliculas p {
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.irPeli {
+  background-color: #007bff; 
+  color: white; 
+  border: none; 
+  border-radius: 8px; 
+  padding: 10px 30px;
+  margin: 20px;
+  font-size: 1rem;
+  cursor: pointer; 
+  transition: background-color 0.3s, transform 0.3s; 
+}
+
+.irPeli:hover {
+  background-color: #0056b3; 
+  transform: scale(1.05); 
+}
+
+.datos-peliculas p {
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+#categorias {
+  margin-top: 30px;
+}
+
+#categorias a > div {
+  height: 200px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#categorias-titulo {
+  display: inline-block;
+  color: white;
+}
+
+#categorias-tarjetas {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px 10px;
+  gap: 15px;
+}
+
+#categorias a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.3rem;
+  overflow: hidden;
+  width: 150px; /* Asegura el ancho del enlace */
+  height: 200px; /* Asegura la altura del enlace */
+}
+
+#categorias a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: border 0.3s
+}
+
+#categorias a p {
+  position: relative;
+  z-index: 2;
+}
+
+#categoria-accion {
+  background: url(../img/categorias/accion.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+#categoria-aventura {
+  background: url(../img/categorias/aventura.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+#categoria-comedia {
+  background: url(../img/categorias/comedia.jpeg);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+#categoria-crimen {
+  background: url(../img/categorias/crimen.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#categoria-documental {
+  background: url(../img/categorias/documental.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.categorias-hover{
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.categorias-hover:hover {
+  /* transform: scale(1.1); */
+  border: 3px solid #ffffff;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0 40px;
+}
+
+.div-categorias h2::first-letter {
+  text-transform: capitalize;
+}
+
+.categoria-imagenes {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 50px 20px;
+  flex-wrap: wrap;
+}
+
+.categoria-imagenes img {
+  height: 350px;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.categoria-imagenes img:hover{
+  border: 3px solid #ffffff;
+}
+
+.div-peliculas {
+  position: absolute;
+  z-index: 3;
+}
+
+.div-busquedas {
+  position: relative;
+  margin-top: 150px;
+}
+
+@media (max-width: 876px) {
+  .datos-peliculas {
+    top: 6.6%; /* Subir más el contenedor en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 768px) {
+  .datos-peliculas {
+    top: 6.5%; /* Subir más el contenedor en pantallas más pequeñas */
+  }
+}
+@media (max-width: 583px) {
+  .datos-peliculas {
+    top: 4.7%; /* Subir aún más el contenedor en pantallas más pequeñas */
+  }
+}
+@media (max-width: 480px) {
+  .datos-peliculas {
+    top: 4.5%; /* Subir aún más el contenedor en pantallas más pequeñas */
+  }
+}

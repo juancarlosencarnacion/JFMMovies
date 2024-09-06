@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/jfmIcono.png" type="image/x-icon" />
+    <title id="title">Titulo</title>
+    <!-- <link rel="stylesheet" href="../css/index.css" /> -->
+    <link rel="stylesheet" href="../css/detalles.css">
+    <link rel="stylesheet" href="../css/headerFooter.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Material icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0"
+    />
+</head>
+
+<body>
+    <header class="flex-style">
+        <section class="flex-style iconoTexto">
+            <a href="./index.html">
+                <img src="../img/jfmIcono.png" alt="" />
+                <h1>Movies</h1>
+              </a>
+        </section>
+        <nav class="flex-style nav-bar">
+            <a href="./index.html">Inicio</a>
+            <a href="./index.html" id="nav-btn-peliculas">Peliculas</a>
+            <form class="search-bar">
+              <input
+                type="text"
+                id="input-search-movies"
+                placeholder="Search movies..."
+              />
+              <div class="actions-btn">
+                <button id="btn-search-movies">
+                  <span class="material-icons">search</span>
+                </button>
+              </div>
+            </form>
+          </nav>
+      </header>
+
+    <div class="breadcrumb-area" id="breadcrumb-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="page-title-wrapper">
+                        <h1 class="page-title">Detalles</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="container">
+        <main>
+            <div class="movie-details-container">
+                <div class="movie-details">
+                    <div class="movie-poster">
+                        <img src="" alt="Portada de la Película" id="poster">
+                    </div>
+                    <div class="movie-info">
+                        <h2 id="name"></h2>
+                        <p id="synopsis"></p>
+                        <p id="category"></p>
+                        <p id="duration"></p>
+                        <p id="rating"></p>
+                        <p id="cast"></p>
+                        <p id="director"></p>
+                        <p id="year"></p>
+                    </div>
+                </div>
+                <div class="movie-trailer">
+                    <h1 class="trailer">Tráiler</h3>
+                        <div id="trailer-container">
+                            <iframe id="trailer" width="1240" height="720" src="" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="movie-details-box-content">
+                                <button class="button" id="like-button">
+                                    <i class="fas fa-heart"></i> Like
+                                </button>
+                                <button class="button" id="dislike-button">
+                                    <i class="fas fa-thumbs-down"></i> Dislike
+                                </button>
+                                <button class="button" id="share-button" data-url="">
+                                    <i class="fas fa-share"></i> Share
+                                </button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="recommended-movies">
+                <h3>Películas Recomendadas</h3>
+                <div class="movie-list">
+                    <!-- Aquí puedes agregar las películas recomendadas -->
+
+                </div>
+            </div>
+
+            <footer class="footer-container">
+                <div class="footer-area-about">
+                    <div class="footer-logo">
+                        <img src="../img/jfmIcono.png" alt="Logo" id="footer-logo">
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/" target="_blank"><img src="../img/redes/instagram.png"
+                                    alt="Instagram"></a>
+                            <a href="https://www.facebook.com/" target="_blank"><img src="../img/redes/facebook.png"
+                                    alt="Facebook"></a>
+                            <a href="https://x.com/" target="_blank"><img src="../img/redes/gorjeo.png"
+                                    alt="Twitter"></a>
+                            <!-- <p id="footer-text">La mejor manera de decidir qué película ver. JFM te ofrece toda la información que necesitas.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- <div class="footer-follow">
+                            <h3>Síguenos</h3>
+                            <div class="social-icons">
+                                <a href="https://www.instagram.com/" target="_blank"><img
+                                        src="../img//redes/facebook.png" alt="Instagram"></a>
+                                <a href="https://www.facebook.com/" target="_blank"><img src="fotico"
+                                        alt="Facebook"></a>
+                                <a href="https://x.com/" target="_blank"><img src="fotico" alt="Twitter"></a>
+                                <a href="https://www.pinterest.com/" target="_blank"><img src="fotico"
+                                        alt="Pinterest"></a>
+                            </div>
+                        </div> -->
+                    <div class="footer-contact">
+                        <h3>Contáctanos</h3>
+                        <div class="contact-info">
+                            <p>Dirección: casa de Jose David</p>
+                            <p>Teléfono: número de Francis</p>
+                            <p>Email: juancarlos@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2024 JFM. Todos los derechos reservados.</p>
+                        <div class="footer-legal">
+                            <a href="#">Política de privacidad</a>
+                            <a href="#">Términos y Condiciones</a>
+                        </div>
+                    </div>
+            </footer>
+
+
+            <script src="../js/detalles.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="shortcut icon" href="../img/jfmIcono.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/headerFooter.css" />
+    <!-- Material icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0"
+    />
+  </head>
+  <body>
+    <header class="flex-style">
+      <section class="flex-style iconoTexto">
+      <a href="./index.html">
+        <img src="../img/jfmIcono.png" alt="" />
+        <h1>Movies</h1>
+      </a>
+      </section>
+      <nav class="flex-style nav-bar">
+        <a href="./index.html">Inicio</a>
+        <a href="/index" id="nav-btn-peliculas">Peliculas</a>
+        <form class="search-bar">
+          <input
+            type="text"
+            id="input-search-movies"
+            placeholder="Search movies..."
+          />
+          <div class="actions-btn">
+            <button id="btn-search-movies">
+              <span class="material-icons">search</span>
+            </button>
+          </div>
+        </form>
+      </nav>
+    </header>
+
+    <main id="contenedor-principal">
+      <div id="recomendaciones">
+        <div class="recomendaciones-contenido">
+          <div class="slider">
+            <div class="slider-inner"></div>
+          </div>
+          <div class="datos-peliculas"></div>
+        </div>
+      </div>
+
+      <div id="categorias">
+        <h2 id="categorias-titulo">Buscar por Categorias</h2>
+        <div id="categorias-tarjetas">
+          <a href="#crimen-peliculas" class="categorias-hover">
+            <div id="categoria-crimen" >
+              <p>Crimen</p>
+            </div>
+          </a>
+
+          <a href="#comedia-peliculas" class="categorias-hover">
+            <div id="categoria-comedia">
+              <p>Comedia</p>
+            </div>
+          </a>
+
+          <a href="#accion-peliculas" class="categorias-hover">
+            <div id="categoria-accion">
+              <p>Acción</p>
+            </div>
+          </a>
+
+          <a href="#documentales-peliculas" class="categorias-hover">
+            <div id="categoria-documental">
+              <p>Documental</p>
+            </div>
+          </a>
+
+          <a href="#aventura-peliculas" class="categorias-hover">
+            <div id="categoria-aventura">
+              <p>Aventura</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="categorias-secciones"></div>
+    </main>
+    <footer class="footer-container">
+      <div class="footer-area-about">
+        <div class="footer-logo">
+          <img src="../img/jfmIcono.png" alt="Logo" id="footer-logo" />
+          <div class="social-icons">
+            <a href="https://www.instagram.com/" target="_blank"
+              ><img src="../img/redes/instagram.png" alt="Instagram"
+            /></a>
+            <a href="https://www.facebook.com/" target="_blank"
+              ><img src="../img/redes/facebook.png" alt="Facebook"
+            /></a>
+            <a href="https://x.com/" target="_blank"
+              ><img src="../img/redes/gorjeo.png" alt="Twitter"
+            /></a>
+            <!-- <p id="footer-text">La mejor manera de decidir qué película ver. JFM te ofrece toda la información que necesitas.</p> -->
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contáctanos</h3>
+          <div class="contact-info">
+            <p>Dirección: casa de Jose David</p>
+            <p>Teléfono: número de Francis</p>
+            <p>Email: juancarlos@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 JFM. Todos los derechos reservados.</p>
+        <div class="footer-legal">
+          <a href="#">Política de privacidad</a>
+          <a href="#">Términos y Condiciones</a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

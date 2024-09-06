@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/headerFooter.css" />
+  <link rel="stylesheet" href="../css/agregar.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Material icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0" />
+  <title>Agregar Película</title>
+</head>
+
+<body>
+  <header class="flex-style">
+    <section class="flex-style iconoTexto">
+      <a href="./index.html">
+        <img src="../img/jfmIcono.png" alt="" />
+        <h1>Movies</h1>
+      </a>
+    </section>
+    <nav class="flex-style nav-bar">
+      <a class="btn-index" href="./index.html">Inicio</a>
+    </nav>
+  </header>
+
+  <div id="contenedor" class="contenedor">
+    <form id="movies-form" action="movies/" method="POST" class="form-grid">
+      <h1 id="form-title">Agregar Película</h1>
+      <div class="form-group">
+        <label for="categoria">Categoría:</label>
+        <input type="text" id="categoria" name="categoria" required />
+      </div>
+      <div class="form-group">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required />
+      </div>
+      <div class="form-group">
+        <label for="sinopsis">Sinopsis:</label>
+        <textarea id="sinopsis" name="sinopsis" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="duracion">Duración:</label>
+        <input type="text" id="duracion" name="duracion" required />
+      </div>
+      <div class="form-group">
+        <label for="clasificacion_por_edad">Clasificación por Edad:</label>
+        <input type="text" id="clasificacion_por_edad" name="clasificacion_por_edad" required />
+      </div>
+      <div class="form-group">
+        <label for="elenco">Elenco (separado por comas):</label>
+        <input type="text" id="elenco" name="elenco" required />
+      </div>
+      <div class="form-group">
+        <label for="director">Director:</label>
+        <input type="text" id="director" name="director" required />
+      </div>
+      <div class="form-group">
+        <label for="año_de_lanzamiento">Año de Lanzamiento:</label>
+        <input type="text" id="año_de_lanzamiento" name="año_de_lanzamiento" required />
+      </div>
+      <div class="form-group">
+        <label for="trailer">Enlace del Trailer:</label>
+        <input type="url" id="trailer" name="trailer" required />
+      </div>
+      <div class="form-group">
+        <label for="portada">Portada:</label>
+        <input type="text" id="portada" name="portada" required />
+      </div>
+      <div class="form-group">
+        <label for="banner">Banner:</label>
+        <input type="text" id="banner" name="banner" required />
+      </div>
+      <button type="submit" id="form-btn">Agregar Película</button>
+    </form>
+  </div>
+  <div id="contenedor2" class="contenedor">
+    <div id="contenido-tabla">
+      <label for="registros" id="contador">Peliculas registradas (0)</label>
+      <table id="tabla">
+        <thead>
+          <th style="display: none">Indice</th>
+          <!-- <th>Portada</th> -->
+          <th>Portada</th>
+          <th>Título</th>
+          <th>Categoria</th>
+          <th>Año</th>
+          <th>Clasificación por edad</th>
+          <th colspan="2">Acciones</th>
+        </thead>
+        <tbody id="datos">
+          <!-- Agregar los tr y td de forma dinamica -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <pre id="result"></pre>
+  <footer class="footer-container">
+    <div class="footer-area-about">
+      <div class="footer-logo">
+        <img src="../img/jfmIcono.png" alt="Logo" id="footer-logo" />
+        <div class="social-icons">
+          <a href="https://www.instagram.com/" target="_blank"><img src="../img/redes/instagram.png"
+              alt="Instagram" /></a>
+          <a href="https://www.facebook.com/" target="_blank"><img src="../img/redes/facebook.png" alt="Facebook" /></a>
+          <a href="https://x.com/" target="_blank"><img src="../img/redes/gorjeo.png" alt="Twitter" /></a>
+          <!-- <p id="footer-text">La mejor manera de decidir qué película ver. JFM te ofrece toda la información que necesitas.</p> -->
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contáctanos</h3>
+        <div class="contact-info">
+          <p>Dirección: casa de Jose David</p>
+          <p>Teléfono: número de Francis</p>
+          <p>Email: juancarlos@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 JFM. Todos los derechos reservados.</p>
+      <div class="footer-legal">
+        <a href="#">Política de privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/agregar.js"></script>
+</body>
+
+</html>

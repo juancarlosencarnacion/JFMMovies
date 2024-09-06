@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <!-- Google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="contenedor">
+      <form id="login-form" action="/users/login" method="post">
+         <!-- Login Form -->
+        <h3>Login</h3>
+        <label for="input-email">Email</label>
+        <input type="text" id="input-email" name="email" required/>
+
+        <label for="input-password">Password</label>
+        <input type="password" id="input-password" name="password" required/>
+        <p id="forgot-password">Forgot Password?</p>
+
+        <button type="submit">Sign in</button>
+
+        <div id="div-social-accounts">
+          <hr />
+          <p id="login-social-accounts">Login with social accounts</p>
+          <hr />
+        </div>
+
+        <section id="section-social-buttons">
+          <img src="../img/login/google.png" alt="Logo de google" /><img
+            src="../img/login/twitter.png"
+            alt="Logo de Twitter"
+          /><img src="../img/login/github.png" alt="Logo de Github" />
+        </section>
+
+        <p id="p-no-account">Don't have an account? <span id="sign-up">Sign Up</span></p>
+      </form>
+
+      <!-- Registration Form -->
+      <form id="register-form" action="/users/register" method="POST" style="display: none">
+        <!-- Back to login -->
+        <span id="login"><- Login</span>
+        <h3>Register</h3>
+        <label for="register-name">Name</label>
+        <input type="text" id="register-name" name="name" required/>
+
+        <label for="register-lastName">Last Name</label>
+        <input type="text" id="register-lastName" name="last_name" required/>
+
+        <label for="register-email">email</label>
+        <input type="email" id="register-email" name="email" required/>
+
+        <label for="registerpassword">Password</label>
+        <input type="password" id="register-password" name="password" required/>
+
+        <button type="submit" id="btn-signup">Sign Up</button>
+      </form>
+
+      <div class="slider">
+        <div class="slider-inner"></div>
+      </div>
+    </div>
+
+    <pre id="result"></pre>
+
+    <script src="../js/login.js"></script>
+  </body>
+</html>
